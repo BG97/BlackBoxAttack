@@ -1,0 +1,61 @@
+Our goal is to generate adversaries to decieve a simple single layer 
+neural network with 20 hidden nodes into misclassifying data from a 
+test set that is provided by us. This test set consists of examples 
+from classes 0 and 1 from CIFAR10. 
+
+Your target model should have at least 85% accuracy on the test set 
+without
+adversaries. 
+
+A successful attack should have a misclassification rate of at least 10%
+on the test.
+
+Submit your assignments as two files train.py and test.py. Make
+train.py take three inputs: the test data, the target model to 
+attack (in our case this is the network with 20 hidden nodes),
+and a model file name to save the black box model file to.
+
+python train.py <test set> <target model to be attacked> <black box 
+model file> 
+
+Your train.py program should output the accuracy of the target model on 
+the
+test data without adversaries as the first step. This is to verify that 
+your
+model has high accuracy on the test data without adversaries. Otherwise 
+if your
+model has low test accuracy it will be harder to attack.
+
+When running train.py output the accuracy of the target model on the 
+adversaries 
+generated from the test data after each epoch.
+
+Make test.py take three inputs: test set, target model, and the black 
+box model.
+The output should be the accuracy of adversarial examples generated with
+epsilon=0.0625. A successful submission will have accuracy below 10%
+on the advsersarial examples.
+
+python test.py <test set> <target model to be attacked> <black box model 
+file>
+
+Refer to output1
+Original model_B accuracy:92% 
+
+Accuracy for adversaries generated data in each epochs
+epoch1=99.25%
+epoch2=98%
+epoch3=95%
+epoch4=84.5%
+epoch5=83.9%
+epoch6=83.85%
+epoch7=83.81%
+epoch8=83.29%
+epoch9=82.73%
+epoch10=82.71%
+epoch11=62.34%
+epoch12=57.97%
+epoch13=57.17
+
+output_test
+68% accuracy for generated samples
